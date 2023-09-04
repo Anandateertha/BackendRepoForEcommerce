@@ -83,7 +83,7 @@ router.post('/orderfromcart', fetchuser, async (req, res) => {
         let phone = userDetails.phone
         let address = userDetails.address
 
-        let cart = await CartItem.find()
+        let cart = await CartItem.find({id:id})
         console.log(cart)
 
         let orderCart = new Userordered({
